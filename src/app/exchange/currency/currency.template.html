@@ -1,0 +1,29 @@
+<form novalidate [formGroup]="form">
+  <label class="currency">
+    <div>
+        <p class="currency-name">{{currency.name}}</p>
+        <p class="currency-cash"
+          [class.currency-cash_negative]="!computeCash()">
+          You have {{currency.type}}{{computeCash()}}
+        </p>
+    </div>
+    <div>
+      <input formControlName="{{name}}"
+             (focus)="onFocusHandler()"
+             (blur)="onBlurHandler()"
+             class="currency-input"
+             type="text"
+             name="currency"
+             onlyNumbers="true"
+             placeholder="0">
+      <relation *ngIf="isActive() && showRelation"
+                class="currency-relation"
+                [activeCurrency]="activeCurrency"
+                [unactiveCurrency]="unactiveCurrency"></relation>
+      <relation *ngIf="!isActive() && showRelation"
+                class="currency-relation"
+                [activeCurrency]="unactiveCurrency"
+                [unactiveCurrency]="activeCurrency"></relation>
+    </div>
+  </label>
+</form>

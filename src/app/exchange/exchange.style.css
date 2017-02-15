@@ -1,0 +1,42 @@
+.divider {
+  border-top: 1px solid #fff;
+}
+
+.container {
+  position: relative;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.arrow:hover {
+  color: #111;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.relation {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 3px 5px;
+  margin: 10px auto;
+}

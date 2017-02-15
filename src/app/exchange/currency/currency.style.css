@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+.currency {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Arial';
+  /*margin: 10px 0;*/
+  padding: 5px 35px;
+  color: #fff;
+
+  background: #2391ff; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #2391ff 0%, #278ff7 44%, #61a7ed 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #2391ff 0%,#278ff7 44%,#61a7ed 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #2391ff 0%,#278ff7 44%,#61a7ed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2391ff', endColorstr='#61a7ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.currency-name {
+  font-size: 30px;
+}
+
+.currency-cash {
+  font-size: 11px;
+}
+
+.currency-cash_negative {
+  color: red;
+}
+
+.currency-input {
+  height: 30px;
+  font-size: 30px;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  background: none;
+  color: #fff;
+  text-align: right;
+}
+
+.currency-input::-webkit-input-placeholder {color:#fff;}
+.currency-input::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+.currency-input:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+.currency-input:-ms-input-placeholder      {color:#fff;}
+
+.currency-relation {
+  font-size: 11px;
+  text-align: right;
+}

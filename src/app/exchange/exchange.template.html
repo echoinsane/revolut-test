@@ -1,0 +1,33 @@
+<div *ngIf="form">
+  <div class="wrapper">
+    <relation class="relation"
+              [activeCurrency]="activeCurrency"
+              [unactiveCurrency]="unactiveCurrency"></relation>
+  </div>
+  <div class="container">
+    <currency [currency]="currentCurrency"
+              [form]="form"
+              [name]="'currentModel'"
+              (onFocusActive)="setActiveType($event)"
+              [activeCurrency]="activeCurrency"
+              [unactiveCurrency]="unactiveCurrency"></currency>
+
+    <div class="arrow left"
+        (click)="previousCurrency(currentCurrency, 'current')"><</div>
+    <div class="arrow right"
+        (click)="nextCurrency(currentCurrency, 'current')">></div>
+  </div>
+  <div class="container">
+    <currency [currency]="exchangeCurrency"
+              [form]="form"
+              [name]="'exchangeModel'"
+              (onFocusActive)="setActiveType($event)"
+              [activeCurrency]="activeCurrency"
+              [unactiveCurrency]="unactiveCurrency"
+              class="divider"></currency>
+    <div class="arrow left"
+        (click)="previousCurrency(exchangeCurrency, 'exchange')"><</div>
+    <div class="arrow right"
+        (click)="nextCurrency(exchangeCurrency, 'exchange')">></div>
+  </div>
+</div>
